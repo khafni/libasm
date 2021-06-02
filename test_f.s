@@ -1,17 +1,20 @@
 section .data
-helloworld: db "Hello world", 0xa
-helloworld_len: equ $-helloworld
+helloworld:
+    call _say_hi
+    db "Hello world"
 
 section .text
-            global _say_hi
+            global _start
+
+_start:
+    jmp helloworld
 
 _say_hi:
     ;mov rbp, rsp 
+    pop rsi
     mov rax, 0x2000004
     mov rdi, 1
-    ; pop rsi
-    mov rsi, helloworld
-    mov rdx, helloworld_len
+    mov rdx, 0xa
     syscall
    
 _exit:
