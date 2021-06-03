@@ -1,7 +1,7 @@
 section .text
-    global ft_strlen
+    global _ft_strlen
 
-ft_strlen:
+_ft_strlen:
     ;bitwise xor sets the rcx register as 0
     ;because xor any number with itself gives 0
     xor rcx, rcx
