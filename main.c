@@ -10,6 +10,7 @@ int main()
 {
     char *dst = malloc(10);
     char *src = strdup("fuck");
-    printf("%s", ft_strcpy(dst, src));
+    //printf("%s", ft_strcpy(dst, src));
+    printf("%s", ft_strdup("smth wow"));
     return (0);
 }

@@ -1,7 +1,7 @@
 section .text
-    global _ft_strcpy
+    global ft_strcpy
 ;rdi = char *dest ; rsi = char *src
-_ft_strcpy:
+ft_strcpy:
     xor rcx, rcx
 
 _loop:
